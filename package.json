@@ -11,8 +11,7 @@
   "scripts": {
     "bundle": "bundle-scss -m \"./src/*.scss\" -d \"./dist/dist.scss\"",
     "build": "node-sass --output-style compressed ./dist/dist.scss --output ./dist",
-    "dist": "npm run bundle && npm run build",
-    "pub": "npm run dist && npm publish"
+    "dist": "npm run bundle && npm run build"
   },
   "dependencies": {
     "bundle-scss": "^1.5.1",
