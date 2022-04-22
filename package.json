@@ -13,10 +13,6 @@
     "build": "node-sass --output-style compressed ./dist/dist.scss --output ./dist",
     "dist": "npm run bundle && npm run build"
   },
-  "dependencies": {
-    "bundle-scss": "^1.5.1",
-    "node-sass": "^7.0.1"
-  },
   "homepage": "https://wiki.karena.moe",
   "repository": {
     "type": "git",
@@ -28,5 +24,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "bundle-scss": "^1.5.1",
+    "node-sass": "^7.0.1"
   }
 }

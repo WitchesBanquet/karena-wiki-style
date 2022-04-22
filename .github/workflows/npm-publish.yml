@@ -5,10 +5,8 @@ name: Publish NPM Package
 
 on:
   push:
-    branches:
-      - main
     tags:
-      - "*"
+      - "v*"
 
 jobs:
   build:
@@ -18,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: npm install
       - run: npm run dist
 
   publish-npm:
@@ -29,6 +28,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: npm install
       - run: npm run dist
       - run: npm publish
         env:
