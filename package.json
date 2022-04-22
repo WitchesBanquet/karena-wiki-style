@@ -1,0 +1,33 @@
+{
+  "name": "@witches-banquet/karena-wiki-style",
+  "version": "1.0.0",
+  "author": "Witches Banquet",
+  "license": "AGPL-3.0-or-later",
+  "description": "Style sheet for the Karena Wiki",
+  "keywords": [
+    "karena-wiki",
+    "style"
+  ],
+  "scripts": {
+    "bundle": "bundle-scss -m \"./src/*.scss\" -d \"./dist/dist.scss\"",
+    "build": "node-sass --output-style compressed ./dist/dist.scss --output ./dist",
+    "dist": "npm run bundle && npm run build",
+    "pub": "npm run dist && npm publish"
+  },
+  "dependencies": {
+    "bundle-scss": "^1.5.1",
+    "node-sass": "^7.0.1"
+  },
+  "homepage": "https://wiki.karena.moe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WitchesBanquet/karena-wiki-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WitchesBanquet/karena-wiki-style/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
